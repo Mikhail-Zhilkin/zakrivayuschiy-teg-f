@@ -17,4 +17,361 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: var(--main-font-weight, 400);
+  color: var(--color, #000);
+  background-color: var(--bg-color, #fff);
+  background-attachment: fixed;
+  background-image: var(--bg-image);
+  background-size: cover;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.header {
+  width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  height: clamp(20.438rem, 3.85vw + 19.535rem, 23rem);
+  background-color: #fff;
+  border: 2px solid #000;
+  margin: 100px auto;
+  font-family: var(--accent-font);
+  font-weight: var(--main-font-weight, 400);
+}
+
+.logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-start: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-start: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.theme-menu {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 25px;
+  margin-inline-start: clamp(9.625rem, 15.117vw + 6.082rem, 19.688rem);
+  margin-inline-end: clamp(8.313rem, 15.399vw + 4.703rem, 18.563rem);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__item {
+  height: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  left: -14px;
+  font-size: 14px;
+  line-height: 14px;
+  animation: moving 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes moving {
+  0% {
+    left: -14px;
+  }
+
+  100% {
+    left: -10px;
+  }
+}
+
+.main {
+  font-size: 18px;
+  font-weight: var(--main-font-weight);
+  line-height: 117%;
+}
+
+.post {
+  width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  margin: 100px auto;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.post__title {
+  width: 100%;
+  height: 33px;
+  font-size: 18px;
+  font-weight: var(--accent-font-weight);
+  line-height: 22px;
+  border-block-end: 2px solid #000;
+  text-align: start;
+  padding-inline-start: 10px;
+  padding-block-start: 4px;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  margin: 27px 25px 27px;
+}
+
+.my-content {
+  margin-block-end: 25px;
+  margin-inline-start: 25px;
+  margin-inline-end: 25px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
+}
+
+.label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font);
+  font-weight: var(--main-font-weight);
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-shadow:
+    -1px 0 #fff, 
+   0 1px #fff, 
+   1px 0 #fff, 
+   0 -1px #fff;
+   mix-blend-mode: hard-light;
+   opacity: .5;
+}
+
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .label {
+      -webkit-text-stroke: 1px #fff;
+      text-stroke: 1px #fff;
+      text-shadow: none;
+  }
+} 
+
+.button {
+  font-family: var(--accent-font);
+  font-weight: var(--main-font-weight);
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+.button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background-color: #000;
+  transition: width 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 #000;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 100%;
+}
+
+.button__text {
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.core {
+  fill: #fff;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: #fff;
+  transition: fill 0.3s linear;
+}
+
+.contour {
+  fill: #000;
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon:hover .core {
+  fill: #000;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: #000;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--sparks);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--sparks);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--sparks);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--sparks);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--sparks);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.like-icon.is-liked .heart {
+  animation: scaleHeart 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: opacitySparks 0.3s ease-in 0.3s;
+}
+
+@keyframes scaleHeart {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes opacitySparks {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid #000;
+}
+
+.buttons {
+  display: flex;
+  justify-content: end;
+  margin-block-end: 25px;
+  margin-inline-end: 25px;
+  height: 38px;
+}
+
+.footer {
+  width: clamp(19.25rem, 2.723vw + 18.612rem, 21.063rem);
+  min-height: 55px;
+  background-color: #fff;
+  margin: 50px auto 103px;
+}
+
+.footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 55px;
+  line-height: 90%;
+  text-align: center;
+}
+
+.floppy {
+  width: 21px;
+  height: 21px;
 }
