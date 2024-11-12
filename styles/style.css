@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: var(--main-font-weight, 400);
+  font-weight: var(--main-font-weight, 400);
   color: var(--accent-color, #000);
   background-color: var(--bg-color, #fff);
   background-attachment: fixed;
@@ -33,7 +33,7 @@
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
   margin: 100px auto;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, sans-serif);
   font-weight: var(--main-font-weight, 400);
 }
 
@@ -126,7 +126,7 @@
 
 .main {
   font-size: 18px;
-  font-weight: var(--main-font-weight);
+  font-weight: var(--main-font-weight, 400);
   line-height: 117%;
   max-width: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
   margin: 0 auto;
@@ -147,7 +147,7 @@
   width: 100%;
   min-height: 33px;
   font-size: 18px;
-  font-weight: var(--accent-font-weight);
+  font-weight: var(--accent-font-weight, 700);
   line-height: 22px;
   border-block-end: var(--border);
   text-align: start;
@@ -181,8 +181,8 @@
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  font-family: var(--accent-font);
-  font-weight: var(--main-font-weight);
+  font-family: var(--accent-font, sans-serif);
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 14px;
   text-shadow: -1px 0 var(--shadow), 0 1px var(--shadow), 1px 0 var(--shadow),
@@ -200,8 +200,8 @@
 }
 
 .button {
-  font-family: var(--accent-font);
-  font-weight: var(--main-font-weight);
+  font-family: var(--accent-font, sans-serif);
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   color: var(--blend);
   background-color: transparent;
@@ -217,7 +217,7 @@
   position: absolute;
   inset: 0;
   width: 0%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   transition: width 0.5s ease-in-out;
 }
 
@@ -230,7 +230,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 .sparks {
@@ -251,7 +251,6 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border: none;
   cursor: pointer;
   border: 2px solid transparent;
 }
@@ -292,7 +291,7 @@
   margin: 50px auto 105px;
   line-height: 90%;
   text-align: center;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
   padding: 15px 19px;
 }
 

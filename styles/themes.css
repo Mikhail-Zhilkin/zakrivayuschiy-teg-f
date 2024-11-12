@@ -19,6 +19,7 @@
   --contour-heart: #000;
   --blend: #fff;
   --shadow: #fff;
+  --font-variation-settings: "wght" var(--main-font-weight);
 }
 
 :root.theme-dark {
