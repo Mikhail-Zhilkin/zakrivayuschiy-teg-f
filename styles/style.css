@@ -18,13 +18,13 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wdth" var(--main-font-weight, 400), "wdth" var(--accent-font-weight, 700);
+  font-variation-settings: "wdth" var(--main-font-weight, 400);
   color: var(--accent-color, #000);
   background-color: var(--bg-color, #fff);
   background-attachment: fixed;
   background-image: var(--bg-image);
   background-size: cover;
-  width: 100%;
+  width: 100%; 
 }
 
 .header {
@@ -147,7 +147,7 @@
   width: 100%;
   min-height: 33px;
   font-size: 18px;
-  font-weight: var(--accent-font-weight, 700);
+  font-variation-settings: "wdth" var(--accent-font-weight, 700);
   line-height: 22px;
   border-block-end: var(--border);
   text-align: start;
@@ -332,7 +332,7 @@
 
 .modal__title {
   font-family: var(--accent-font);
-  font-weight: var(--main-font-weight);
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 150%;
   color: var(--accent-color, #000);
