@@ -18,23 +18,22 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wdth" var(--main-font-weight, 400);
+  font-variation-settings: 'wght' var(--main-font-weight, 400);
   color: var(--accent-color, #000);
   background-color: var(--bg-color, #fff);
   background-attachment: fixed;
   background-image: var(--bg-image);
   background-size: cover;
-  width: 100%; 
+  width: 100%;
 }
 
 .header {
   width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
-  height: clamp(20.438rem, 3.85vw + 19.535rem, 23rem);
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
   margin: 100px auto;
   font-family: var(--accent-font, sans-serif);
-  font-weight: var(--main-font-weight, 400);
+  font-weight: 400;
 }
 
 .logo {
@@ -65,6 +64,7 @@
   margin-block-start: 25px;
   margin-inline-start: clamp(9.625rem, 15.117vw + 6.082rem, 19.688rem);
   margin-inline-end: clamp(8.313rem, 15.399vw + 4.703rem, 18.563rem);
+  margin-block-end: 27px;
 }
 
 .theme-menu__list {
@@ -147,7 +147,7 @@
   width: 100%;
   min-height: 33px;
   font-size: 18px;
-  font-variation-settings: "wdth" var(--accent-font-weight, 700);
+  font-variation-settings: 'wght' var(--accent-font-weight, 700);
   line-height: 22px;
   border-block-end: var(--border);
   text-align: start;
@@ -182,7 +182,7 @@
   inset-block-start: 25px;
   inset-inline-end: 25px;
   font-family: var(--accent-font, sans-serif);
-  font-weight: var(--main-font-weight, 400);
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-shadow: -1px 0 var(--shadow), 0 1px var(--shadow), 1px 0 var(--shadow),
@@ -201,7 +201,7 @@
 
 .button {
   font-family: var(--accent-font, sans-serif);
-  font-weight: var(--main-font-weight, 400);
+  font-weight: 400;
   font-size: 14px;
   color: var(--blend);
   background-color: transparent;
@@ -253,6 +253,7 @@
   background-color: transparent;
   cursor: pointer;
   border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .like-icon {
@@ -304,17 +305,15 @@
 
 .modal {
   width: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
-  height: 191px;
   background-color: var(--bg-color, #fff);
   border: var(--border);
-  padding: 30px auto;
 }
 
 .modal[open] {
   display: grid;
   grid-template-columns: 1fr calc(100% - 60px);
   align-content: space-between;
-  row-gap: 20px;
+  row-gap: 30px;
   padding: 30px;
   align-items: center;
 }
@@ -331,8 +330,8 @@
 }
 
 .modal__title {
-  font-family: var(--accent-font);
-  font-weight: var(--main-font-weight, 400);
+  font-family: var(--accent-font, sans-serif);
+  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: var(--accent-color, #000);
